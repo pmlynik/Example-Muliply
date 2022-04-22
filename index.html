@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+    <title>Mnozenie</title>
+	<link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+	
+	
+	function mnozenie()
+
+	{
+		var a = document.getElementById("a").value;
+		var b = document.getElementById("b").value;
+
+		var Wynik = a*b;
+		document.getElementById("Mnozenie").innerHTML = Wynik;
+		
+		if (a == "" || b == "")
+		{
+			alert('Błąd! Proszę wpisać liczbe!');
+			return;
+		}
+		if (isNaN(a) || isNaN(b))
+		{
+			alert('Błąd! Proszę wpisać liczbe!');
+			return;
+		}
+	}
+	
+	
+	</script>
+     
+</head>
+<body>
+	<section>
+		<header>
+			<div class = "clock">
+				<div></div>
+				<div><h1>MNOŻENIE</h1></div>	
+				<div></div>
+			</div>
+		</header>
+		<main id = "mnozenie">
+			<section id="section1">
+				<div id="div1">
+				
+					<p>Liczba a:</p> 
+					<input type="number" id="a">
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;Liczba b:</p>
+					<input type="number" id="b"/><br>
+					
+				</div>
+				<div id="div2">		
+					<button class="btn btn-primary" onclick="mnozenie()" > OBLICZ </button>
+					
+				</div>
+			</section>
+			<section id="section2">
+				
+				<p>Wynik: 
+				<span id="Mnozenie"/>
+				</p>
+				
+			</section>
+		</main>
+		<header>
+			<div class = "clock">
+			<div></div>
+			<h1>Tabela mnożenia</h1>
+			<div></div>
+		</header>
+		<main id ="tabela">
+			<section id="section1">
+				<div id="div1">
+				
+					<p>Liczba wierszy:</p> 
+					<input type="number" id="wiersz">
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;Liczba kolumn:</p>
+					<input type="number" id="kolumna"/><br>
+					
+				</div>
+				
+			</section>
+			<section  id="section3">
+				<div id="div2">
+				
+					<button id='button'>WYZNACZ</button>
+				</div>
+			</section>
+			<div id="tabela"></div>
+		</main>
+	</section>
+	<script src="tabela.js"></script>
+</body>
+</html>
